@@ -3,7 +3,7 @@ import { NavLink, Outlet } from 'react-router-dom'
 import { useAuth } from '../lib/auth'
 import {
   LayoutDashboard, Users, Truck, UserCheck, Wallet,
-  Bell, LogOut, Menu, X, Leaf, MapPin, BadgeDollarSign,
+  Bell, LogOut, Menu, X, MapPin, BadgeDollarSign,
 } from 'lucide-react'
 
 const nav = [
@@ -30,12 +30,10 @@ export default function Layout() {
         ${open ? 'translate-x-0' : '-translate-x-full'}
         lg:relative lg:translate-x-0
       `}>
-        <div className="flex items-center gap-3 px-6 py-5 border-b border-slate-100">
-          <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
-            <Leaf size={16} className="text-white" />
-          </div>
-          <span className="font-bold text-slate-800 text-lg">Trash2Earn</span>
-          <span className="ml-auto text-xs bg-slate-100 text-slate-500 px-2 py-0.5 rounded font-medium">Admin</span>
+        <div className="flex items-center gap-3 px-5 py-4 border-b border-slate-100">
+          <img src="/logo.png" alt="Trash2Earn" className="w-9 h-9 rounded-xl object-cover flex-shrink-0" />
+          <span className="font-bold text-slate-800 text-base">Trash2Earn</span>
+          <span className="ml-auto text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full font-semibold border border-green-200">Admin</span>
         </div>
 
         <nav className="flex-1 px-3 py-4 space-y-0.5 overflow-y-auto">
@@ -80,6 +78,7 @@ export default function Layout() {
           <button onClick={() => setOpen(true)} className="p-1.5 rounded-lg hover:bg-slate-100">
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
+          <img src="/logo.png" alt="" className="w-7 h-7 rounded-lg object-cover" />
           <span className="font-semibold text-slate-800">Trash2Earn Admin</span>
         </header>
         <main className="flex-1 overflow-y-auto p-6">

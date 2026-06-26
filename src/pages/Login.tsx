@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../lib/auth'
-import { Leaf, Mail, Lock, AlertCircle, ArrowRight } from 'lucide-react'
+import { Mail, Lock, AlertCircle, ArrowRight } from 'lucide-react'
 
 export default function Login() {
   const { signIn, user } = useAuth()
@@ -41,9 +41,7 @@ export default function Login() {
 
         {/* Logo */}
         <div className="flex items-center gap-3 relative z-10">
-          <div className="w-10 h-10 bg-white/20 backdrop-blur rounded-xl flex items-center justify-center">
-            <Leaf size={20} className="text-white" />
-          </div>
+          <img src="/logo.png" alt="Trash2Earn" className="w-10 h-10 rounded-xl object-cover" />
           <span className="text-white font-bold text-xl">Trash2Earn</span>
         </div>
 
@@ -78,9 +76,7 @@ export default function Login() {
       <div className="flex-1 flex flex-col justify-center items-center p-8 bg-slate-50">
         {/* Mobile logo */}
         <div className="flex items-center gap-2 mb-8 lg:hidden">
-          <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
-            <Leaf size={16} className="text-white" />
-          </div>
+          <img src="/logo.png" alt="Trash2Earn" className="w-8 h-8 rounded-lg object-cover" />
           <span className="font-bold text-slate-800">Trash2Earn Admin</span>
         </div>
 
